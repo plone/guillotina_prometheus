@@ -3,7 +3,7 @@ from setuptools import setup
 
 
 try:
-    README = open('README.rst').read()
+    README = open('README.rst').read() + '\n\n' + open('CHANGELOG.rst').read()
 except IOError:
     README = None
 
@@ -13,8 +13,9 @@ setup(
     description='prometheus integration into guillotina',
     long_description=README,
     install_requires=[
-        'guillotina',
-        'prometheus_client'
+        'guillotina>=1.3.4',
+        'prometheus_client',
+        'prometheus_async'
     ],
     author='Nathan Van Gheem',
     author_email='vangheem@gmail.com',

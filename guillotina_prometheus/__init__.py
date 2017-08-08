@@ -1,8 +1,8 @@
 from guillotina import configure
+from guillotina_prometheus import middleware
 
 
 app_settings = {
-    # provide custom application settings here...
 }
 
 

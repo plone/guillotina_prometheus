@@ -1,9 +1,10 @@
 from guillotina import configure
+from guillotina.interfaces import IApplication
+import prometheus_client
 
 
-@configure.service(method='POST', name='@foobar',
+@configure.service(method='GET', name='@stats', context=IApplication,
                    permission='guillotina.AccessContent')
-async def example_service(self):
-    return {
-        'foo': 'bar'
-    }
+async def get_stats(context, request):
+    output = prometheus_client.exposition.generate_latest()
+    return output.decode('utf8')
