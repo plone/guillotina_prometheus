@@ -9,7 +9,7 @@ except IOError:
 
 setup(
     name='guillotina_prometheus',
-    version='1.0.1.dev0',
+    version='1.0.1',
     description='prometheus integration into guillotina',
     long_description=README,
     install_requires=[
