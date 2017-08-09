@@ -1,7 +1,8 @@
 1.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Prefix stat keys so it won't conflict with other stats
+  [vangheem]
 
 
 1.0.4 (2017-08-09)
