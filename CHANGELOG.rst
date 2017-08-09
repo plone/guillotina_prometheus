@@ -1,4 +1,4 @@
-1.0.3 (unreleased)
+1.0.3 (2017-08-08)
 ------------------
 
 - Do not record user id
