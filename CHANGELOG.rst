@@ -1,4 +1,4 @@
-1.0.5 (unreleased)
+1.0.5 (2017-08-09)
 ------------------
 
 - Prefix stat keys so it won't conflict with other stats
