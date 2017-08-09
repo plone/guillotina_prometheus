@@ -1,7 +1,8 @@
 1.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Change publishing endpoint to /metrics -- more standard
+  [vangheem]
 
 
 1.0.3 (2017-08-08)
