@@ -1,5 +1,5 @@
 from guillotina import configure
-from guillotina_prometheus import middleware
+from guillotina_prometheus import middleware  # noqa
 
 
 app_settings = {

@@ -1,7 +1,8 @@
 1.0.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Provide timing per endpoint instead of aggregating all endpoints into one metric
+  [vangheem]
 
 
 1.0.5 (2017-08-09)
