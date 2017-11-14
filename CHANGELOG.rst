@@ -1,4 +1,4 @@
-1.0.6 (unreleased)
+1.0.6 (2017-11-14)
 ------------------
 
 - Provide timing per endpoint instead of aggregating all endpoints into one metric
