@@ -18,7 +18,7 @@ setup(
     ],
     author='Nathan Van Gheem',
     author_email='vangheem@gmail.com',
-    url='https://github.com/onna/guillotina_prometheus',
+    url='https://github.com/guillotinaweb/guillotina_prometheus',
     packages=find_packages(exclude=['demo']),
     include_package_data=True,
     tests_require=[
