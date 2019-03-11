@@ -29,7 +29,14 @@ setup(
             'pytest'
         ]
     },
-    classifiers=[],
+    classifiers=[
+        "License :: OSI Approved :: BSD License",
+        "Intended Audience :: Developers",
+        "Topic :: Internet :: WWW/HTTP",
+        "Programming Language :: Python :: 3.6",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+    ],
+    license="BSD",
     entry_points={
     }
 )
