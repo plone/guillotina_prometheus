@@ -1,4 +1,4 @@
-1.0.8 (unreleased)
+1.0.8 (2019-06-18)
 ------------------
 
 - restrict versions
