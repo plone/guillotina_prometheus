@@ -1,7 +1,8 @@
 5.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixing egg missing VERSION file
+  [bloodbare]
 
 
 5.0.0 (2019-07-01)
