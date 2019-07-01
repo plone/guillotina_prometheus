@@ -9,11 +9,11 @@ except IOError:
 
 setup(
     name='guillotina_prometheus',
-    version='1.0.9.dev0',
+    version=open('VERSION').read().strip(),
     description='prometheus integration into guillotina',
     long_description=README,
     install_requires=[
-        'guillotina>=4,<5',
+        'guillotina>=5.0.0a10',
         'prometheus_client'
     ],
     author='Nathan Van Gheem',
