@@ -9,14 +9,14 @@ Configuration
 Just add a few lines to your config.yml::
 
   {"applications": ["guillotina_prometheus"],
-   "middlewares": ["guillotina_prometheus.middleware.middleware_factory"]}
+   "middlewares": ["guillotina_prometheus.middleware.PrometheusMiddleware"]}
 
-   
+
 
 Dependencies
 ------------
 
-Python >= 3.6
+Python >= 3.7
 
 
 Installation
