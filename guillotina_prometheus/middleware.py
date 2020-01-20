@@ -26,7 +26,7 @@ class PrometheusMiddleware:
             metric = metrics.request_summary.labels(
                 method=request.method,
                 view=view_name,
-                response_code=resp.status if resp else 500)
+                response_code=resp.status_code if resp else 500)
 
             try:
                 metric.observe(request.events['finish'] - request.events['start'])
