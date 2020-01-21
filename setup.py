@@ -13,8 +13,8 @@ setup(
     description='prometheus integration into guillotina',
     long_description=README,
     install_requires=[
-        'guillotina>=5.0.0a10',
-        'prometheus_client'
+        'guillotina>=6.0.0a6',
+        'prometheus_client==0.7.1'
     ],
     author='Nathan Van Gheem',
     author_email='vangheem@gmail.com',

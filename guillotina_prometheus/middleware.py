@@ -1,36 +1,35 @@
 from guillotina.utils import get_dotted_name
+from guillotina import task_vars
 from guillotina_prometheus import metrics
+from guillotina.component import get_utility
 
 
-class Handler:
+class PrometheusMiddleware:
 
-    def __init__(self, app, handler):
-        self.app = app
-        self.handler = handler
+    def __init__(self, app):
+        self.next_app = app
 
-    async def __call__(self, request):
+    async def __call__(self, scope, receive, send):
+        resp = None
         try:
+            resp = await self.next_app(scope, receive, send)
+        finally:
+            request = task_vars.request.get()
             try:
-                view_name = get_dotted_name(request.found_view.view_func)
+                try:
+                    view_name = get_dotted_name(request.found_view.view_func)
+                except AttributeError:
+                    view_name = get_dotted_name(request.found_view)
             except AttributeError:
-                view_name = get_dotted_name(request.found_view)
-        except AttributeError:
-            view_name = 'unknown'
+                view_name = 'unknown'
 
-        resp = await self.handler(request)
+            metric = metrics.request_summary.labels(
+                method=request.method,
+                view=view_name,
+                response_code=resp.status_code if resp else 500)
 
-        metric = metrics.request_summary.labels(
-            method=request.method,
-            view=view_name,
-            response_code=resp.status)
-
-        try:
-            metric.observe(request.events['finish'] - request.events['start'])
-        except (AttributeError, KeyError):
-            pass
-
+            try:
+                metric.observe(request.events['finish'] - request.events['start'])
+            except (AttributeError, KeyError):
+                pass
         return resp
-
-
-async def middleware_factory(app, handler):
-    return Handler(app, handler)

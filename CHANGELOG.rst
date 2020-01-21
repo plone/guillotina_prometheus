@@ -1,7 +1,9 @@
-5.0.2 (unreleased)
+
+6.0.0.dev0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Support Guillotina 6
+  [masipcat]
 
 
 5.0.1 (2019-07-01)
