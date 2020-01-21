@@ -1,5 +1,5 @@
 
-6.0.0.dev0 (unreleased)
+6.0.0 (2020-01-21)
 ------------------
 
 - Support Guillotina 6
